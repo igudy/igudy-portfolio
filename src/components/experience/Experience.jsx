@@ -32,7 +32,23 @@ const Experience = () => {
             <article className='experience__details'>
               <BsPatchCheckFill className="experience__details-icon"/>
               <div>
+                <h4>CSS</h4>
+                <small className='text-light'>Bootstrap</small>
+              </div>
+            </article>
+
+            <article className='experience__details'>
+              <BsPatchCheckFill className="experience__details-icon"/>
+              <div>
                 <h4>Javascript</h4>
+                <small className='text-light'>Experienced</small>
+              </div>
+            </article>
+
+            <article className='experience__details'>
+              <BsPatchCheckFill className="experience__details-icon"/>
+              <div>
+                <h4>React</h4>
                 <small className='text-light'>Experienced</small>
               </div>
             </article>
