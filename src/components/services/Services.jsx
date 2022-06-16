@@ -17,36 +17,16 @@ const Services = () => {
           <ul className='service__list'>
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium</p>
             </li>
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium</p>
             </li>            
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium</p>
             </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>
           </ul>
         </article>
         {/* End of Graphic Design */}
@@ -54,42 +34,26 @@ const Services = () => {
         {/* Front End Development */}
         <article className='service'>
           <div className="serivce__head">
-            <h3>Graphic Design</h3>
+            <h3>Front-end Development</h3>
           </div>
 
           <ul className='service__list'>
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla</p>
             </li>
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae null</p>
             </li>            
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla</p>
             </li>            
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium</p>
+            </li>                    
           </ul>
         </article>
 
@@ -98,42 +62,22 @@ const Services = () => {
         {/* Web Development */}
         <article className='service'>
           <div className="serivce__head">
-            <h3>Graphic Design</h3>
+            <h3>Web Development</h3>
           </div>
 
           <ul className='service__list'>
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla</p>
             </li>
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla</p>
             </li>            
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla</p>
             </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>           
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo iure assumenda praesentium at nesciunt vitae nulla, laborum eveniet blanditiis incidunt dolorum nobis amet iusto excepturi error ex aperiam deserunt.</p>
-            </li>
           </ul>
         </article>
 
