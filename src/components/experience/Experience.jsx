@@ -4,13 +4,13 @@ import './experience.css'
 
 const Experience = () => {
   return (
-    <section id='experience'>
+    <section id='experience' className='skill'>
       <h5>What Skills I Have</h5>
       <h2>My Experience</h2>
 
       <div className="container experience__container">
         <div className="experience__frontend">
-          <h3>FrontEnd Development</h3>
+          <h3>Frontend Development</h3>
 
           <div className="experience__content">
             <article className='experience__details'>
@@ -79,6 +79,28 @@ const Experience = () => {
               <BsPatchCheckFill className="experience__details-icon"/>
               <div>
                 <h4>MySQL</h4>
+                <small className='text-light'>Experienced</small>
+              </div>
+            </article>
+
+        </div>
+        </div>
+
+        <div className="experience__backend center">
+          <h3>Graphic Design</h3>
+          <div className="experience__content">
+            <article className='experience__details'>
+              <BsPatchCheckFill className="experience__details-icon"/>
+              <div>
+                <h4>Adobe Photoshop</h4>
+                <small className='text-light'>Experienced</small>
+              </div>
+            </article>
+
+            <article className='experience__details'>
+              <BsPatchCheckFill className="experience__details-icon"/>
+              <div>
+                <h4>Adobe Illustrator</h4>
                 <small className='text-light'>Experienced</small>
               </div>
             </article>

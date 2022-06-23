@@ -4,6 +4,31 @@
     gap: 15%;
 }
 
+
+.btnAbout{
+    width: 8rem;
+    height: 3rem;
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+}
+
+.btnAbout:hover{
+    background: transparent;
+    color: white;
+    border-color: 1px solid var(--color-primary);
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+
 .about__me{
     width: 100%;
     aspect-ratio: 1/1;

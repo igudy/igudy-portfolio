@@ -11,10 +11,11 @@
 }
 
 :root{
-    --color-bg: #1f1f38;
-    --color-bg-variant: #2c2c6c;
-    --color-primary: #4db5ff;
-    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-bg: #014b01;
+    --color-bg-variant: #032911;
+    --color-bg-variantt:rgb(27, 64, 40);
+    --color-primary: #18ce1f;
+    --color-primary-variant: rgba(22, 108, 1, 0.862);
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, 0.6);
 
@@ -35,10 +36,11 @@ html{
 
 body{
     font-family: "Poppins", sans-serif;
-    background: var(--color-bg);
+    background: var(--color-bg-variantt);
     color: var(--color-white);
     line-height: 1.7;
     background-image: url(../src/assets/bg-texture.png);
+
 }
 
 
@@ -53,7 +55,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1{
-    font-size: 2.5rem
+    font-size: 1.5remrem
 }
 
 section{
@@ -84,15 +86,15 @@ a:hover{
 }
 
 .btn{
-    width: 9rem;
+    width: 8rem;
     height: 3rem;
-    margin: 0.6rem;
+    margin: 1rem 1rem 1rem 1rem;
     display: inline-block;
     color: var(--color-primary);
     padding: 0.5rem;
     border-radius: 0.4rem;
     cursor: pointer;
-    border: 2px solid var(--color-primary);
+    border: 1px solid var(--color-primary);
     transition: var(--transition);
 }
 

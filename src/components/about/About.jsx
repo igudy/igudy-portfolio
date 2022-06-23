@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/me-about.jpg'
+import ME from '../../assets/me_studio.png'
 import {FaAward} from 'react-icons/fa'
 import {FiUsers} from 'react-icons/fi'
 import {VscFolderLibrary} from 'react-icons/vsc'
@@ -23,13 +23,13 @@ const About = () => {
             <article className='about__card'>
               <FaAward className='about__icon' />
               <h5>Experience</h5>
-              <small>3+ Years Working</small>
+              <small>2+ Years Experience</small>
             </article>
 
             <article className='about__card'>
               <FiUsers className='about__icon' />
               <h5>Clients</h5>
-              <small>200+ WorldWide</small>
+              <small>100+ Clients</small>
             </article>
 
             <article className='about__card'>
@@ -39,15 +39,16 @@ const About = () => {
             </article>
           </div>
 
-          <p>Lorem, ipsum dolor sit amet consectetur
-             adipisicing elit. Mollitia dicta vitae,
-              itaque animi possimus cum dolore ipsa 
-              beatae vero. Nihil sint rem facilis 
-              aliquid reiciendis quos atque
-               inventore neque excepturi.
+          <p>Full Stack Web Developer - Bootstrap, JavaScript, React, PHP & Laravel.<br></br> My expertise
+            ranges from developing engaging and responsive user interfaces, backend logic, and debugging websites / 
+            web applications.
           </p>
-
-          <a href='#contact' className='btn btn-primary'>
+          <p>Graphic Designer - Adobe Photoshop & Illustrator<br></br>
+            Proficient graphic designer knowledgeable about branding, logos, flyers, posters, marketing materials and website design
+            .Highly creative interactive development professional with experience in business development.
+          
+          </p>
+          <a href='#contact' className='btnAbout btn-primary'>
             Let's Talk
           </a>
 

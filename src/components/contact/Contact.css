@@ -1,3 +1,7 @@
+#id{
+    margin-top: -30rem;
+}
+
 .container.contact__container{
     width: 58%;
     display: grid;
@@ -58,12 +62,16 @@ input, textarea{
     .container.contact__container{
         grid-template-columns: 1fr;
         gap: 2rem;
-    }    
+    }
 }
 
 /* Media Query (Small Devices) */
 @media screen and (max-width: 600px){
     .container.contact__container{
         width: var(--container-width-sm);
+    }
+
+    #contact{
+        margin-top: 20rem;
     }
 }
