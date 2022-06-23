@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.632a428e.css",
+    "main.js": "/static/js/main.ac0af553.js",
+    "static/media/me_studio.png": "/static/media/me_studio.cb190e05307ab69f4780.png",
+    "static/media/me.jpg": "/static/media/me.e4d8b9811abd752f863f.jpg",
+    "static/media/portfolio5.png": "/static/media/portfolio5.a82ae9a163c1ac5e3a07.png",
+    "static/media/Software_Engineer-Igunma_Goodness.pdf": "/static/media/Software_Engineer-Igunma_Goodness.014db224720f9996ee8b.pdf",
+    "static/media/portfolio2.jpg": "/static/media/portfolio2.ae187bc4e43ae6dbc263.jpg",
+    "static/media/portfolio6.jpg": "/static/media/portfolio6.72d1107e313049cf15a7.jpg",
+    "static/media/portfolio1.jpg": "/static/media/portfolio1.f5e72352e5aa840702b8.jpg",
+    "static/media/portfolio3.jpg": "/static/media/portfolio3.cbab42559fe73e73906f.jpg",
+    "static/media/portfolio4.jpg": "/static/media/portfolio4.6bf60cbb8fe5f7d7af5d.jpg",
+    "index.html": "/index.html",
+    "main.632a428e.css.map": "/static/css/main.632a428e.css.map",
+    "main.ac0af553.js.map": "/static/js/main.ac0af553.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.632a428e.css",
+    "static/js/main.ac0af553.js"
+  ]
+}
