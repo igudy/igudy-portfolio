@@ -67,3 +67,11 @@ footer a{
         margin-bottom: 2rem;
     }
 }
+
+
+/* Media Queries(Medium Devices) */
+@media screen and (max-width: 1024px){
+    #footer{
+        margin: 20rem 0 0 0;
+    }
+}

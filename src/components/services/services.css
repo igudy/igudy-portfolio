@@ -57,7 +57,6 @@
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
-
     .service{
         height: auto;
     }
@@ -65,12 +64,14 @@
 
 /* MEDIA QUERIES(SMALL DEVICES) */
 @media screen and (max-width: 600px){
-    .skill{
-        margin: 12rem 0 0 0;
-    }
     .services__container{
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+
+    #services{
+        margin: 20rem 0 0 0;
+    }
+
 }
 

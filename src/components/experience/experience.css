@@ -59,10 +59,9 @@
 
 /* MEDIA QUERIES(SMALL DEVICES) */
 @media screen and (max-width: 600px){
-    .skill{
-        margin: 14rem 0 0 0;
+    #experience{
+        margin: 30rem 0 0 0;
     }
-    
     .experience__container{
         gap: 1rem;
     }

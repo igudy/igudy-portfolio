@@ -2,6 +2,22 @@ import React from 'react'
 import { BiCheck } from 'react-icons/bi'
 import './services.css'
 
+// const data = [
+//   {
+//     id: 1,
+//     service: 'Building responsive web applications',
+//   },
+//   {
+//     id: 2,
+//     service: 'Building front end website architecture',
+//   },
+//   {
+//     id: 3,
+//     service: 'Lorem ipsum dolor sii',
+//   },
+// ]
+
+
 const Services = () => {
   return (
     <section id='services'>
