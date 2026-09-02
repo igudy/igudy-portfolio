@@ -1,4 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+/* Tailwind v4 - utilities only (preflight omitted to preserve the custom design) */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@config "../tailwind.config.js";
+
+/* Ignovations font: ClashDisplay */
+@font-face {
+    font-family: "ClashDisplay";
+    src: url("/fonts/ClashDisplay-Bold.otf") format("opentype");
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ClashDisplay";
+    src: url("/fonts/ClashDisplay-Semibold.otf") format("opentype");
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ClashDisplay";
+    src: url("/fonts/ClashDisplay-Medium.otf") format("opentype");
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ClashDisplay";
+    src: url("/fonts/ClashDisplay-Regular.otf") format("opentype");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ClashDisplay";
+    src: url("/fonts/ClashDisplay-Light.otf") format("opentype");
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ClashDisplay";
+    src: url("/fonts/ClashDisplay-Extralight.otf") format("opentype");
+    font-display: swap;
+    font-weight: 200;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -11,13 +59,14 @@
 }
 
 :root{
-    --color-bg: #014b01;
-    --color-bg-variant: #032911;
-    --color-bg-variantt:rgb(27, 64, 40);
-    --color-primary: #18ce1f;
-    --color-primary-variant: rgba(22, 108, 1, 0.862);
-    --color-white: #fff;
-    --color-light: rgba(255, 255, 255, 0.6);
+    /* Dark theme + yellow accent */
+    --color-bg: #0b0b0d;
+    --color-bg-variant: #16161a;
+    --color-bg-variantt: #0b0b0d;
+    --color-primary: #ffc93c;
+    --color-primary-variant: rgba(255, 201, 60, 0.35);
+    --color-white: #f5f5f5;
+    --color-light: rgba(255, 255, 255, 0.65);
 
     --transition: all 400ms ease;
 
@@ -35,12 +84,13 @@ html{
 }
 
 body{
-    font-family: "Poppins", sans-serif;
-    background: var(--color-bg-variantt);
+    font-family: "ClashDisplay", "Poppins", sans-serif;
+    background: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url(../src/assets/bg-texture.png);
-
+    background-image:
+        radial-gradient(rgba(255, 201, 60, 0.06) 1px, transparent 1px);
+    background-size: 22px 22px;
 }
 
 
@@ -55,11 +105,12 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1{
-    font-size: 1.5remrem
+    font-size: 2.5rem;
 }
 
 section{
-    margin-top: 8rem
+    margin-top: 8rem;
+    scroll-margin-top: 6rem;
 }
 
 section > h2, section > h5{
@@ -86,16 +137,16 @@ a:hover{
 }
 
 .btn{
-    width: 8rem;
-    height: 3rem;
-    margin: 1rem 1rem 1rem 1rem;
+    width: max-content;
     display: inline-block;
     color: var(--color-primary);
-    padding: 0.5rem;
-    border-radius: 0.4rem;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     border: 1px solid var(--color-primary);
     transition: var(--transition);
+    font-family: inherit;
+    font-size: 0.95rem;
 }
 
 .btn:hover{
@@ -108,7 +159,12 @@ a:hover{
     background: var(--color-primary);
     color: var(--color-bg);
 }
- 
+
+.btn-primary:hover{
+    background: #ffd76b;
+    color: var(--color-bg);
+}
+
 
 img{
     display: block;
@@ -120,24 +176,22 @@ img{
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px){
     .container{
-        width: (var(--container-width-md))
+        width: var(--container-width-md);
     }
 
     section{
         margin-top: 6rem;
-        height: 100vh;
     }
 }
 
 
 /* MEDIA QUERIES (SMALL DEVICES) */
-@media screen and (max-width: 600){
+@media screen and (max-width: 600px){
     .container{
-        width: (var(--container-width-sm))
+        width: var(--container-width-sm);
     }
 
     section > h2{
         margin-bottom: 2rem;
     }
-
 }

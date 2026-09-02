@@ -10,18 +10,16 @@ const header = () => {
       <div className="container header__container">
         <h3>Hello I'm Igunma Goodness Igudy</h3>
 
-        <h1>FOUNDER & SOFTWARE ENGINEER</h1>
+        <h1>FOUNDER & <span>SOFTWARE ENGINEER</span></h1>
 
         <h4 className="text-light">Building products & future leaders at Ignovations · React · React Native · TypeScript · Node.js</h4>
 
         <CTA />
         <HeaderSocials />
-      
+
         <div className="me">
           <img src={Me} alt="Igudy" style={{ objectPosition: 'center top' }} />
         </div>
-        
-        <a href='#contact' className="scroll__down">Scroll Down</a>
       </div>
     </header>
   )
