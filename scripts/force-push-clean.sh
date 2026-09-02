@@ -20,7 +20,7 @@ echo "=== Scanning working tree for malware ==="
 if [[ -f scripts/supply-chain-guard.py ]]; then
   python3 scripts/supply-chain-guard.py scan .
 else
-  echo "WARN: scripts/supply-chain-guard.py not found — skipping scan" >&2
+  echo "WARN: scripts/supply-chain-guard.py not found - skipping scan" >&2
 fi
 
 echo ""

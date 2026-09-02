@@ -14,7 +14,7 @@ import os
 import sys
 from pathlib import Path
 
-# Primary IOC markers — built dynamically so this file is not flagged by text scans
+# Primary IOC markers - built dynamically so this file is not flagged by text scans
 def _malware_markers() -> tuple[str, ...]:
     g = "global["
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionHeading from '../ui/SectionHeading'
-import ME from '../../assets/ignovations/igudy-pro.jpg'
+import ME from '../../assets/ignovations/igudy-about.jpg'
 import { FaAward } from 'react-icons/fa'
 import { FiUsers } from 'react-icons/fi'
 import { VscFolderLibrary } from 'react-icons/vsc'
@@ -27,7 +27,7 @@ const About = () => {
               <img
                 src={ME}
                 alt="Igunma Goodness"
-                className="w-full h-[20rem] sm:h-[22rem] object-cover object-top"
+                className="w-full h-[26rem] sm:h-[30rem] object-contain object-center bg-white"
               />
             </div>
           </div>
