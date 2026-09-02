@@ -3,11 +3,9 @@ import SectionHeading from '../ui/SectionHeading'
 import {MdOutlineEmail} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
 import {BsWhatsapp, BsCheckCircleFill, BsExclamationCircleFill} from 'react-icons/bs'
-import emailjs from '@emailjs/browser';
 
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+// FormSubmit target: an email address or your FormSubmit alias (recommended, hides the email).
+const FORMSUBMIT_ENDPOINT = 'goodnessigunma1@gmail.com'
 
 type Toast = { type: 'success' | 'error'; msg: string }
 
@@ -24,26 +22,38 @@ const Contact = () => {
     return () => clearTimeout(t)
   }, [toast])
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (loading) return
+    if (loading || !form.current) return
     setLoading(true)
 
-    emailjs
-      .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current!, {
-        publicKey: EMAILJS_PUBLIC_KEY,
+    try {
+      const data = new FormData(form.current)
+      // FormSubmit control fields
+      data.append('_subject', `New portfolio message from ${data.get('name') || 'a visitor'}`)
+      data.append('_template', 'table')
+      data.append('_captcha', 'false')
+
+      const res = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_ENDPOINT}`, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: data,
       })
-      .then(() => {
+      const result = await res.json()
+
+      if (res.ok && String(result.success) === 'true') {
         setToast({ type: 'success', msg: 'Message sent! I will get back to you shortly.' })
-        form.current?.reset()
-      })
-      .catch((err) => {
-        // Surface the real EmailJS error to help diagnose (e.g. blocked origin, bad IDs)
-        console.error('EmailJS send failed:', err)
-        const detail = err?.text || err?.message || 'Please try again or email me directly.'
-        setToast({ type: 'error', msg: `Could not send: ${detail}` })
-      })
-      .finally(() => setLoading(false))
+        form.current.reset()
+      } else {
+        throw new Error(result?.message || 'Submission failed')
+      }
+    } catch (err) {
+      console.error('FormSubmit send failed:', err)
+      const detail = err instanceof Error ? err.message : 'Please try again or email me directly.'
+      setToast({ type: 'error', msg: `Could not send: ${detail}` })
+    } finally {
+      setLoading(false)
+    }
   };
 
   const inputClass =
