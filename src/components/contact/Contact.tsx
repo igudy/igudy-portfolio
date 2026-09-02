@@ -3,7 +3,11 @@ import SectionHeading from '../ui/SectionHeading'
 import {MdOutlineEmail} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
 import {BsWhatsapp, BsCheckCircleFill, BsExclamationCircleFill} from 'react-icons/bs'
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 type Toast = { type: 'success' | 'error'; msg: string }
 
@@ -26,13 +30,18 @@ const Contact = () => {
     setLoading(true)
 
     emailjs
-      .sendForm('service_iecm02n', 'template_zokpahf', form.current!, 'HH9WM6g8bCsZSVgWM')
+      .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current!, {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      })
       .then(() => {
         setToast({ type: 'success', msg: 'Message sent! I will get back to you shortly.' })
         form.current?.reset()
       })
-      .catch(() => {
-        setToast({ type: 'error', msg: 'Something went wrong. Please try again or email me directly.' })
+      .catch((err) => {
+        // Surface the real EmailJS error to help diagnose (e.g. blocked origin, bad IDs)
+        console.error('EmailJS send failed:', err)
+        const detail = err?.text || err?.message || 'Please try again or email me directly.'
+        setToast({ type: 'error', msg: `Could not send: ${detail}` })
       })
       .finally(() => setLoading(false))
   };
