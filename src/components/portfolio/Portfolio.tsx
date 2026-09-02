@@ -5,11 +5,11 @@ import SectionHeading from '../ui/SectionHeading'
 import { products } from '../../data/products'
 
 // Feature a curated selection of recent work; the full list lives on /products
-const featured = products.slice(0, 8)
+const featured = products.slice(0, 12)
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="section bg-beige">
+    <section id="portfolio" className="section bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="My Recent Work" title="Featured Products" />
 

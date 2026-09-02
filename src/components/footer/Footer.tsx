@@ -1,7 +1,5 @@
 import React from 'react'
-import { FaFacebookF } from 'react-icons/fa'
-import { FiInstagram } from 'react-icons/fi'
-import { IoLogoTwitter } from 'react-icons/io'
+import { BsGithub, BsLinkedin, BsInstagram, BsTwitter } from 'react-icons/bs'
 
 const links = [
   { href: '#header', label: 'Home' },
@@ -15,9 +13,10 @@ const links = [
 ]
 
 const socials = [
-  { icon: <FaFacebookF />, href: 'https://m.me/goodness.igudy' },
-  { icon: <FiInstagram />, href: 'https://instagram.com/igudy_dev' },
-  { icon: <IoLogoTwitter />, href: 'https://twitter.com/igudydev' },
+  { icon: <BsGithub />, label: 'GitHub', href: 'https://github.com/igudy' },
+  { icon: <BsLinkedin />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/goodness-igunma-65bb581a7/' },
+  { icon: <BsInstagram />, label: 'Instagram', href: 'https://instagram.com/igudy_dev' },
+  { icon: <BsTwitter />, label: 'Twitter', href: 'https://twitter.com/igudydev' },
 ]
 
 const Footer = () => {
@@ -45,6 +44,7 @@ const Footer = () => {
               href={s.href}
               target="_blank"
               rel="noreferrer"
+              aria-label={s.label}
               className="grid place-items-center w-11 h-11 bg-white text-ink border-2 border-white neo-hover"
             >
               {s.icon}

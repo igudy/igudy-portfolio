@@ -118,7 +118,7 @@ export const products: Product[] = [
     id: 26,
     image: ignovations,
     title: "Ignovations",
-    desc: "The software and digital products studio I founded, building mobile apps, web platforms, and full product launches for founders and teams, alongside teaching the next generation of tech leaders.",
+    desc: "The software and digital products studio I founded, building mobile apps, web platforms, and full product launches for founders and teams.",
     link: "https://ignovations.com",
     categories: ["web", "portfolio"],
   },

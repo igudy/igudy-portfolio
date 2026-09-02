@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaRocket, FaLaptopCode, FaTools, FaChalkboardTeacher } from 'react-icons/fa'
+import { FaRocket, FaLaptopCode, FaTools } from 'react-icons/fa'
 import SectionHeading from '../ui/SectionHeading'
 
 const pillars = [
@@ -18,14 +18,9 @@ const pillars = [
     title: 'Clean, maintainable systems',
     text: 'I focus on reusable, well-tested, and performant code, setting a technical standard that turns ideas into software teams can keep building on.',
   },
-  {
-    icon: <FaChalkboardTeacher />,
-    title: 'Teaching & mentorship',
-    text: 'Through masterclasses like Beyond Coding, I help young engineers sharpen their craft, so the impact goes a little beyond the code I write.',
-  },
 ]
 
-const iconColors = ['bg-yellow text-ink', 'bg-pink text-white', 'bg-green text-white', 'bg-blue text-white']
+const iconColors = ['bg-yellow text-ink', 'bg-pink text-white', 'bg-green text-white']
 
 const Leadership = () => {
   return (
@@ -36,11 +31,10 @@ const Leadership = () => {
         <p className="max-w-3xl mx-auto text-center text-white/80 mb-12 leading-relaxed">
           I have spent years building and shipping production software for some of the biggest names
           in finance and tech, including Sterling Bank, FCMB, and Interswitch, alongside local and
-          international clients. Most of my work lives deep in the code, and some of it is about
-          helping other engineers grow.
+          international clients.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {pillars.map((p, i) => (
             <article key={i} className="card-neo-3 p-6 neo-hover">
               <div

@@ -1,27 +1,40 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import SectionHeading from '../ui/SectionHeading'
 import {MdOutlineEmail} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
-import {BsWhatsapp} from 'react-icons/bs'
-import { useRef } from 'react';
+import {BsWhatsapp, BsCheckCircleFill, BsExclamationCircleFill} from 'react-icons/bs'
 import emailjs from 'emailjs-com';
+
+type Toast = { type: 'success' | 'error'; msg: string }
 
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false)
+  const [toast, setToast] = useState<Toast | null>(null)
+
+  // Auto-dismiss the toast
+  useEffect(() => {
+    if (!toast) return
+    const t = setTimeout(() => setToast(null), 5000)
+    return () => clearTimeout(t)
+  }, [toast])
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (loading) return
+    setLoading(true)
 
-    emailjs.sendForm('service_iecm02n', 'template_zokpahf', form.current!, 'HH9WM6g8bCsZSVgWM')
-    e.currentTarget.reset() 
-  
-  
-  // .then((result) => {
-  //         console.log(result.text);
-  //     }, (error) => {
-  //         console.log(error.text);
-  //     });
+    emailjs
+      .sendForm('service_iecm02n', 'template_zokpahf', form.current!, 'HH9WM6g8bCsZSVgWM')
+      .then(() => {
+        setToast({ type: 'success', msg: 'Message sent! I will get back to you shortly.' })
+        form.current?.reset()
+      })
+      .catch(() => {
+        setToast({ type: 'error', msg: 'Something went wrong. Please try again or email me directly.' })
+      })
+      .finally(() => setLoading(false))
   };
 
   const inputClass =
@@ -34,7 +47,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="section bg-beige">
+    <section id="contact" className="section bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="Get In Touch" title="Contact Me" />
 
@@ -64,12 +77,38 @@ const Contact = () => {
             <input type="text" name="subject" placeholder="Subject" required className={inputClass} />
             <input type="email" name="email" placeholder="Your Email" required className={inputClass} />
             <textarea name="message" rows={7} placeholder="Your Message" required className={`${inputClass} resize-none`} />
-            <button type="submit" className="btn-neo btn-primary-neo w-max">
-              Send Message
+            <button
+              type="submit"
+              disabled={loading}
+              className="btn-neo btn-primary-neo w-max inline-flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+            >
+              {loading && (
+                <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              )}
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
       </div>
+
+      {/* Toast */}
+      {toast && (
+        <div
+          role="status"
+          aria-live="polite"
+          className={`fixed left-1/2 -translate-x-1/2 bottom-24 md:bottom-8 z-[60] flex items-center gap-3 px-5 py-3 border-2 border-ink font-semibold text-sm max-w-[90vw] ${
+            toast.type === 'success' ? 'bg-green text-white' : 'bg-pink text-white'
+          }`}
+          style={{ boxShadow: 'var(--shadow-neo-md)' }}
+        >
+          {toast.type === 'success' ? (
+            <BsCheckCircleFill className="text-lg shrink-0" />
+          ) : (
+            <BsExclamationCircleFill className="text-lg shrink-0" />
+          )}
+          <span>{toast.msg}</span>
+        </div>
+      )}
     </section>
   )
 }
