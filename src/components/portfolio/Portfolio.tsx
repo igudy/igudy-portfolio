@@ -5,7 +5,7 @@ import './portfolio.css'
 import { products } from '../../data/products'
 
 // Feature a curated selection of recent work; the full list lives on /products
-const featured = products.slice(0, 6)
+const featured = products.slice(0, 8)
 
 const Portfolio = () => {
   return (
