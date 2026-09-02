@@ -1,87 +1,44 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { HiOutlineExternalLink } from 'react-icons/hi'
 import './portfolio.css'
-// import data from './PortfolioData'
-import IMG1 from '../../assets/portfolio1.jpg'
-import IMG2 from '../../assets/portfolio2.jpg'
-import IMG3 from '../../assets/portfolio3.jpg'
-import IMG4 from '../../assets/portfolio4.jpg'
-import IMG5 from '../../assets/portfolio5.png'
-import IMG6 from '../../assets/portfolio6.jpg'
+import { products } from '../../data/products'
 
-
-const data = [
-  {
-    id: 1,
-    image: IMG1,
-    title: 'Crypto Currency Dashboard & Financial Visualization',
-    github: 'https://github.com/igudy',
-    demo: 'https://www.instagram.com/p/CdX-FE_qKn3/?utm_source=ig_web_copy_link'
-  },
-  {
-    id: 2,
-    image: IMG2,
-    title: 'Charts templates & infographics in Figma',
-    github: 'https://github.com/igudy',
-    demo: 'https://www.instagram.com/p/CdX-FE_qKn3/?utm_source=ig_web_copy_link'
-  },
-  {
-    id: 3,
-    image: IMG3,
-    title: 'Figma dashboard UI kit for data design web apps',
-    github: 'https://github.com/igudy',
-    demo: 'https://www.instagram.com/p/CdX-FE_qKn3/?utm_source=ig_web_copy_link'
-  },
-  {
-    id: 4,
-    image: IMG4,
-    title: 'Dashboard Visualization',
-    github: 'https://github.com/igudy',
-    demo: 'https://www.instagram.com/p/CdX-FE_qKn3/?utm_source=ig_web_copy_link'
-  },
-  {
-    id: 5,
-    image: IMG5,
-    title: 'Financial Visualization',
-    github: 'https://github.com/igudy',
-    demo: 'https://www.instagram.com/p/CdX-FE_qKn3/?utm_source=ig_web_copy_link'
-  },
-  {
-    id: 6,
-    image: IMG6,
-    title: 'Dashboard & Financial Visualization',
-    github: 'https://github.com/igudy',
-    demo: 'https://www.instagram.com/p/CdX-FE_qKn3/?utm_source=ig_web_copy_link'
-  },
-]
-
-
+// Feature a curated selection of recent work; the full list lives on /products
+const featured = products.slice(0, 6)
 
 const Portfolio = () => {
-  return(
+  return (
     <section id="portfolio">
       <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
+      <h2>Featured Products</h2>
+
       <div className="container portfolio__container">
-      
-      {
-        data.map(({id, image, title, github, demo})=>{
-          return(
-            <article key={id} className='portfolio__item'>
+        {featured.map(({ id, image, title, desc, link }) => (
+          <article key={id} className="portfolio__item">
             <div className="portfolio__item-image">
-              <img src={image} alt="" />
+              <img src={image} alt={title} />
             </div>
             <h3>{title}</h3>
-            {/* <div className="portfolio__item-cta"> */}
-              <a href={github} className='btnGit' target='_blank'>Github</a>
-              <a href={demo} className='btnGit' target='_blank'>Live Demo</a>
-            {/* </div> */}
+            <p className="portfolio__item-desc">{desc}</p>
+            {link && link !== '#' ? (
+              <a href={link} className="btnGit" target="_blank" rel="noreferrer">
+                View project <HiOutlineExternalLink />
+              </a>
+            ) : (
+              <span className="btnGit btnGit--soon">Coming soon</span>
+            )}
           </article>
-          )
-        })
-      }
+        ))}
+      </div>
 
+      <div className="portfolio__all">
+        <Link to="/products" className="btn btn-primary">
+          View all products
+        </Link>
       </div>
     </section>
   )
 }
+
 export default Portfolio
