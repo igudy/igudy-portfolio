@@ -17,7 +17,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="Get to Know" title="About Me" />
 
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Image */}
           <div className="flex">
             <div
@@ -27,7 +27,7 @@ const About = () => {
               <img
                 src={ME}
                 alt="Igunma Goodness"
-                className="w-full h-full min-h-[420px] object-cover object-top"
+                className="w-full h-[20rem] sm:h-[22rem] object-cover object-top"
               />
             </div>
           </div>

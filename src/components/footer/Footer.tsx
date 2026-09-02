@@ -25,7 +25,7 @@ const Footer = () => {
     <footer id="footer" className="bg-ink text-white border-t-2 border-ink pb-28 md:pb-12 pt-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <a href="#header" className="heading text-2xl md:text-3xl inline-block text-white">
-          Igunma Goodness <span className="text-yellow">— Igudy</span>
+          Goodness Igunma<span className="text-yellow"> Igudy</span>
         </a>
 
         <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3 mt-8 mb-8">
