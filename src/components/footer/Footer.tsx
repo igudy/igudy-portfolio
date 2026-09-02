@@ -16,8 +16,8 @@ const links = [
 
 const socials = [
   { icon: <FaFacebookF />, href: 'https://m.me/goodness.igudy' },
-  { icon: <FiInstagram />, href: 'https://instagram.com/iigudy' },
-  { icon: <IoLogoTwitter />, href: 'https://twitter.com/iigudy' },
+  { icon: <FiInstagram />, href: 'https://instagram.com/igudy_dev' },
+  { icon: <IoLogoTwitter />, href: 'https://twitter.com/igudydev' },
 ]
 
 const Footer = () => {

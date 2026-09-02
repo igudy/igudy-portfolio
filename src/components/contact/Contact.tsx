@@ -30,7 +30,7 @@ const Contact = () => {
   const options = [
     { icon: <MdOutlineEmail />, title: 'Email', value: 'goodnessIgunma1@gmail.com', href: 'mailto:goodnessigunma1@gmail.com', color: 'bg-yellow text-ink' },
     { icon: <RiMessengerLine />, title: 'Messenger', value: 'Igudy', href: 'https://m.me/goodness.igudy', color: 'bg-pink text-white' },
-    { icon: <BsWhatsapp />, title: 'WhatsApp', value: '+234-810-825-1426', href: 'https://wa.link/jnvn9r', color: 'bg-green text-white' },
+    { icon: <BsWhatsapp />, title: 'WhatsApp', value: '08108251426', href: 'https://wa.link/jnvn9r', color: 'bg-green text-white' },
   ]
 
   return (

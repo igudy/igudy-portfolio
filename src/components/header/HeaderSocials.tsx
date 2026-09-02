@@ -4,8 +4,8 @@ import { BsGithub, BsLinkedin, BsInstagram, BsTwitter } from 'react-icons/bs'
 const socials = [
   { icon: <BsGithub />, label: 'GitHub', href: 'https://github.com/igudy' },
   { icon: <BsLinkedin />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/goodness-igunma-65bb581a7/' },
-  { icon: <BsInstagram />, label: 'Instagram', href: 'https://instagram.com/iigudy' },
-  { icon: <BsTwitter />, label: 'Twitter', href: 'https://twitter.com/iigudy' },
+  { icon: <BsInstagram />, label: 'Instagram', href: 'https://instagram.com/igudy_dev' },
+  { icon: <BsTwitter />, label: 'Twitter', href: 'https://twitter.com/igudydev' },
 ]
 
 const HeaderSocials = () => {
