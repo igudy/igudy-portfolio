@@ -29,7 +29,19 @@ export const PRODUCT_CATEGORIES = [
   "fintech",
   "portfolio",
   "others",
-];
+] as const;
+
+export type ProductCategory = (typeof PRODUCT_CATEGORIES)[number];
+export type ProductCategorySlug = Exclude<ProductCategory, "all">;
+
+export type Product = {
+  id: number;
+  image: string;
+  title: string;
+  desc: string;
+  link: string;
+  categories: ProductCategorySlug[];
+};
 
 const nectallDesc =
   "Nectall is a professional networking platform for events and everyday connections. Scan a QR code to connect instantly, then manage every contact in one secure hub.";
@@ -40,7 +52,7 @@ const nectallSiteDesc =
 const eduArkDesc =
   "EduArk is an all-in-one school management platform for administrators, teachers, parents, and students. Enrollment, classes, attendance, finances, and academic records in one role-based system.";
 
-export const products = [
+export const products: Product[] = [
   {
     id: 1,
     image: nectallMobileApp,
@@ -211,5 +223,9 @@ export const products = [
   },
 ];
 
-export const productMatchesCategory = (product, category) =>
-  category === "all" || product.categories.includes(category);
+export const productMatchesCategory = (
+  product: Product,
+  category: ProductCategory
+): boolean =>
+  category === "all" ||
+  product.categories.includes(category as ProductCategorySlug);

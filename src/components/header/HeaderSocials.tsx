@@ -1,21 +1,22 @@
 import React from 'react'
 import { BsGithub, BsLinkedin, BsInstagram, BsTwitter } from 'react-icons/bs'
 
+const socials = [
+  { icon: <BsGithub />, label: 'GitHub', href: 'https://github.com/igudy' },
+  { icon: <BsLinkedin />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/goodness-igunma-65bb581a7/' },
+  { icon: <BsInstagram />, label: 'Instagram', href: 'https://instagram.com/iigudy' },
+  { icon: <BsTwitter />, label: 'Twitter', href: 'https://twitter.com/iigudy' },
+]
+
 const HeaderSocials = () => {
   return (
     <div className="header__socials">
-      <a href="https://github.com/igudy" target="_blank" rel="noreferrer" aria-label="GitHub">
-        <BsGithub />
-      </a>
-      <a href="https://www.linkedin.com/in/goodness-igunma-65bb581a7/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-        <BsLinkedin />
-      </a>
-      <a href="https://instagram.com/iigudy" target="_blank" rel="noreferrer" aria-label="Instagram">
-        <BsInstagram />
-      </a>
-      <a href="https://twitter.com/iigudy" target="_blank" rel="noreferrer" aria-label="Twitter / X">
-        <BsTwitter />
-      </a>
+      {socials.map((s) => (
+        <a key={s.label} href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}>
+          {s.icon}
+          <span>{s.label}</span>
+        </a>
+      ))}
     </div>
   )
 }

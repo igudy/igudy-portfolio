@@ -39,15 +39,15 @@ const About = () => {
             </article>
           </div>
 
-          <p>I'm a founder and software engineer at Ignovations, where I design and ship real
-            products used by real people, from mobile apps to full web platforms. I've built and
-            delivered software for some of the biggest names in finance and tech, including Sterling Bank,
-            FCMB, and Interswitch, alongside a range of local and international clients.
+          <p><strong>Technology is my tool. Impact is my mission.</strong> I believe the future is built
+            by people who solve meaningful problems, develop other leaders, and create systems that outlive
+            them. My work centers on building global solutions and raising the next generation of technology
+            leaders.
           </p>
-          <p>My work spans the full stack, React, React Native, TypeScript, Node.js, NestJS and MongoDB,
-            with a strong focus on building reusable, scalable, and maintainable products. Beyond the code,
-            I mentor and teach young Nigerians through masterclasses like Beyond Coding, helping them grow
-            into skilled, confident builders and leaders.
+          <p>Over the past several years I've contributed to the design and development of products across
+            fintech, banking, startups, CRM, and enterprise environments, helping build scalable platforms,
+            core banking systems, and digital products that deliver real business value, for companies like
+            Sterling Bank, Interswitch, and a range of local and international clients.
           </p>
           <a href='#contact' className='btnAbout btn-primary'>
             Let's Talk

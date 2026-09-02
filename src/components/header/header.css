@@ -1,6 +1,6 @@
 header{
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
     overflow: hidden;
 }
 
@@ -9,7 +9,7 @@ header{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
 }
 
 .header__container h3{
@@ -21,90 +21,92 @@ header{
 .header__container h1{
     color: var(--color-white);
     letter-spacing: 1px;
+    line-height: 1.2;
+    max-width: 900px;
 }
 
-.header__container h1 span,
-.header__container .highlight{
+.header__container h1 span{
     color: var(--color-primary);
 }
 
 .header__container h4{
-    max-width: 620px;
-    margin-top: 0.4rem;
+    max-width: 640px;
+    margin-top: 0.3rem;
+}
+
+/* Tech stack (white pills) */
+.header__stack{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+    max-width: 720px;
+}
+
+.header__stack li{
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
 }
 
 /* CTA */
 .cta{
-    margin-top: 1.6rem;
+    margin-top: 1.8rem;
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-/* HEADER SOCIALS (visible, horizontal) */
+/* HEADER SOCIALS (visible, with labels) */
 .header__socials{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 1.4rem;
-    margin-top: 1.6rem;
+    gap: 0.9rem;
+    margin-top: 1.8rem;
 }
 
 .header__socials a{
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 2.6rem;
-    height: 2.6rem;
-    border-radius: 50%;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
     border: 1px solid var(--color-primary-variant);
     color: var(--color-light);
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     transition: var(--transition);
+}
+
+.header__socials a svg{
+    font-size: 1.1rem;
 }
 
 .header__socials a:hover{
     color: var(--color-bg);
     background: var(--color-primary);
     border-color: transparent;
-    transform: translateY(-4px);
-}
-
-/* Me */
-.me{
-    margin-top: 3rem;
-    width: 22rem;
-    max-width: 80%;
-    height: 26rem;
-    background: linear-gradient(var(--color-primary), transparent);
-    border-radius: 12rem 12rem 1.5rem 1.5rem;
-    overflow: hidden;
-    padding: 0.9rem;
-}
-
-.me img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 11rem 11rem 1rem 1rem;
-}
-
-
-/* MEDIA QUERIES (MEDIUM DEVICES) */
-@media screen and (max-width: 1024px){
-    header{
-        padding-top: 5rem;
-    }
+    transform: translateY(-3px);
 }
 
 
 /* MEDIA QUERIES (SMALL DEVICES) */
 @media screen and (max-width: 600px){
-    .me{
-        width: 18rem;
-        height: 22rem;
+    .header__container h1{
+        font-size: 2rem;
+    }
+
+    .header__socials a span{
+        display: inline;
     }
 }
