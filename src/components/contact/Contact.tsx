@@ -1,5 +1,5 @@
 import React from 'react'
-import './Contact.css'
+import SectionHeading from '../ui/SectionHeading'
 import {MdOutlineEmail} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
 import {BsWhatsapp} from 'react-icons/bs'
@@ -24,48 +24,52 @@ const Contact = () => {
   //     });
   };
 
+  const inputClass =
+    'w-full p-4 bg-white border-2 border-ink text-ink placeholder:text-ink/40 focus:outline-none focus:shadow-[var(--shadow-neo-sm)] transition-shadow'
+
+  const options = [
+    { icon: <MdOutlineEmail />, title: 'Email', value: 'goodnessIgunma1@gmail.com', href: 'mailto:goodnessigunma1@gmail.com', color: 'bg-yellow text-ink' },
+    { icon: <RiMessengerLine />, title: 'Messenger', value: 'Igudy', href: 'https://m.me/goodness.igudy', color: 'bg-pink text-white' },
+    { icon: <BsWhatsapp />, title: 'WhatsApp', value: '+234-810-825-1426', href: 'https://wa.link/jnvn9r', color: 'bg-green text-white' },
+  ]
+
   return (
-    <section id="contact">
-      <h5>Get In Touch</h5>
-      <h2>Contact Me</h2>
-      <div className="container contact__container">
-        <div className="contact__options">
-          
-          <article className='contact__option'>
-            <MdOutlineEmail className='contact__option-icon'/>
-            <h4>Email</h4>
-            <h6>goodnessIgunma1@gmail.com</h6>
-            <a href='mailto:goodnessigunma1@gmail.com' target="_blank">Send a Message</a>
-          </article>
+    <section id="contact" className="section bg-beige">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading eyebrow="Get In Touch" title="Contact Me" />
 
-          <article className='contact__option'>
-            <RiMessengerLine className='contact__option-icon'/>
-            <h4>Messenger</h4>
-            <h5>Igudy</h5>
-            {/* Add message infomation */}
-            <a href='https://m.me/goodness.igudy' target="_blank">Send a Message</a>
-          </article>
+        <div className="grid lg:grid-cols-[1fr_1.6fr] gap-8">
+          <div className="flex flex-col gap-4">
+            {options.map((o) => (
+              <article key={o.title} className="card-neo p-5 text-center neo-hover">
+                <div className={`inline-grid place-items-center w-11 h-11 border-2 border-ink mb-3 text-xl ${o.color}`}>
+                  {o.icon}
+                </div>
+                <h4 className="heading text-base">{o.title}</h4>
+                <h5 className="text-ink/70 text-sm mt-1 break-words">{o.value}</h5>
+                <a
+                  href={o.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block mt-3 text-purple font-semibold text-sm hover:text-purple-dark"
+                >
+                  Send a Message
+                </a>
+              </article>
+            ))}
+          </div>
 
-          <article className='contact__option'>
-            <BsWhatsapp className='contact__option-icon'/>
-            <h4>Whatsapp</h4>
-            <h5>+234-81-082-51426</h5>
-            <a href='https://wa.link/jnvn9r' target="_blank">Send a Message</a>
-          </article>
+          <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
+            <input type="text" name="name" placeholder="Your Full Name" required className={inputClass} />
+            <input type="text" name="subject" placeholder="Subject" required className={inputClass} />
+            <input type="email" name="email" placeholder="Your Email" required className={inputClass} />
+            <textarea name="message" rows={7} placeholder="Your Message" required className={`${inputClass} resize-none`} />
+            <button type="submit" className="btn-neo btn-primary-neo w-max">
+              Send Message
+            </button>
+          </form>
         </div>
-
-        {/* End of contact options */}
-
-        <form ref={form} onSubmit={sendEmail}>
-        {/* <form> */}
-           <input type="text" name="name" placeholder='Your Full Name' required />
-           <input type="text" name="subject" placeholder='Subject' required />
-           <input type="email" name="email" placeholder='Your Email' required />
-           <textarea name='message' rows={7} placeholder='Your Message' required />
-           <button type='submit' className='btn btn-primary'>Send Message</button>
-        </form>
       </div>
-
     </section>
   )
 }
