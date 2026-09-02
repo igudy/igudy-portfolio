@@ -7,9 +7,9 @@ const Products = () => {
   const [category, setCategory] = useState<ProductCategory>('all')
 
   useEffect(() => {
-    document.title = 'Products & Projects — Igudy | Goodness Igunma'
+    document.title = 'Products & Projects - Igudy | Goodness Igunma'
     return () => {
-      document.title = 'Igudy — Software Engineer, Builder & Tech Educator'
+      document.title = 'Igudy - Software Engineer, Builder & Tech Educator'
     }
   }, [])
 

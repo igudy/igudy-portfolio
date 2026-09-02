@@ -3,12 +3,6 @@ import CTA from './CTA'
 import HeaderSocials from './HeaderSocials'
 import ME from '../../assets/ignovations/igudy-pro.jpg'
 
-const stats = [
-  { value: '6+', label: 'Years building' },
-  { value: '20+', label: 'Products shipped' },
-  { value: 'Global', label: 'Clients served' },
-]
-
 const Header = () => {
   return (
     <header
@@ -22,7 +16,7 @@ const Header = () => {
 
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left — copy */}
+          {/* Left - copy */}
           <div className="text-center lg:text-left">
             <p className="text-base font-semibold text-ink/70">
               Hi, I&apos;m Goodness Igunma (Igudy)
@@ -42,35 +36,26 @@ const Header = () => {
             </h1>
 
             <p className="text-lg text-ink/70 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              I build scalable products across fintech, banking, and enterprise.
+              I build scalable products across fintech, banking, and enterprise
+              software, and I train the next generation of engineers.
             </p>
 
             <CTA />
 
-            {/* Stats */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-8 mt-10">
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <div className="heading text-2xl md:text-3xl text-purple">{s.value}</div>
-                  <div className="text-sm text-ink/60 font-medium">{s.label}</div>
-                </div>
-              ))}
-            </div>
-
             <HeaderSocials />
           </div>
 
-          {/* Right — portrait */}
+          {/* Right - portrait */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative w-full max-w-sm">
               <div
-                className="border-[3px] border-ink bg-white p-2"
+                className="border-[3px] border-ink bg-white p-2 overflow-hidden"
                 style={{ boxShadow: 'var(--shadow-neo-xl)' }}
               >
                 <img
                   src={ME}
                   alt="Igunma Goodness"
-                  className="w-full h-[24rem] sm:h-[28rem] object-cover object-top"
+                  className="w-full h-[24rem] sm:h-[28rem] object-cover object-top scale-[1.7] origin-[50%_22%]"
                 />
               </div>
 

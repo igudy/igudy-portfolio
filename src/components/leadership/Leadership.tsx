@@ -1,27 +1,27 @@
 import React from 'react'
-import { FaRocket, FaChalkboardTeacher, FaUsers, FaLightbulb } from 'react-icons/fa'
+import { FaRocket, FaLaptopCode, FaTools, FaChalkboardTeacher } from 'react-icons/fa'
 import SectionHeading from '../ui/SectionHeading'
 
 const pillars = [
   {
     icon: <FaRocket />,
-    title: 'Building products that ship',
-    text: 'As a founder and software engineer at Ignovations, I lead the design and delivery of real products used by real people, from mobile apps to full web platforms.',
+    title: 'Shipping real products',
+    text: 'As a founder and software engineer at Ignovations, I architect and ship production apps across fintech, banking, CRM, and enterprise, from mobile to full web platforms.',
+  },
+  {
+    icon: <FaLaptopCode />,
+    title: 'Engineering at scale',
+    text: 'I build with React, React Native, Node, and TypeScript, working on micro-frontends and core-banking modules that stay reliable under real-world load.',
+  },
+  {
+    icon: <FaTools />,
+    title: 'Clean, maintainable systems',
+    text: 'I focus on reusable, well-tested, and performant code, setting a technical standard that turns ideas into software teams can keep building on.',
   },
   {
     icon: <FaChalkboardTeacher />,
     title: 'Teaching & mentorship',
-    text: 'Through masterclasses like Beyond Coding, I help young Nigerians move beyond writing code to positioning themselves, building useful solutions, and growing their careers.',
-  },
-  {
-    icon: <FaUsers />,
-    title: 'Leading teams',
-    text: 'I guide engineers and designers to build reusable, scalable, and maintainable software, setting the standard for quality and turning ideas into working products.',
-  },
-  {
-    icon: <FaLightbulb />,
-    title: 'Impact that lasts',
-    text: 'Beyond the code, my focus is impact: empowering people with skills, values, and opportunities so they can build ethical, meaningful innovations of their own.',
+    text: 'Through masterclasses like Beyond Coding, I help young engineers sharpen their craft, so the impact goes a little beyond the code I write.',
   },
 ]
 
@@ -31,13 +31,13 @@ const Leadership = () => {
   return (
     <section id="leadership" className="section bg-purple">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Beyond The Code" title="Leadership & Impact" light />
+        <SectionHeading eyebrow="Beyond The Code" title="Engineering & Impact" light />
 
         <p className="max-w-3xl mx-auto text-center text-white/80 mb-12 leading-relaxed">
-          I have spent years building and shipping real products for some of the biggest names in
-          finance and tech, including Sterling Bank, FCMB, and Interswitch, alongside a range of
-          local and international clients. But the work I am proudest of goes beyond delivery, it is
-          about raising people and building things that matter.
+          I have spent years building and shipping production software for some of the biggest names
+          in finance and tech, including Sterling Bank, FCMB, and Interswitch, alongside local and
+          international clients. Most of my work lives deep in the code, and some of it is about
+          helping other engineers grow.
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
