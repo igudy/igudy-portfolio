@@ -5,8 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/',
   plugins: [react()],
+  // Some product images use uppercase extensions (.JPG/.PNG/.JPEG)
+  assetsInclude: ['**/*.JPG', '**/*.PNG', '**/*.JPEG'],
   server: {
-    port: 3000,
+    port: 5173,
     open: true,
   },
   build: {
