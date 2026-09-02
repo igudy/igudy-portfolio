@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsBriefcase } from 'react-icons/bs'
-import './experience.css'
+import SectionHeading from '../ui/SectionHeading'
 
 const jobs = [
   {
@@ -88,39 +88,53 @@ const skills = [
 
 const Experience = () => {
   return (
-    <section id="experience">
-      <h5>My Journey</h5>
-      <h2>Experience</h2>
+    <section id="experience" className="section bg-cream">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading eyebrow="My Journey" title="Experience" />
 
-      <div className="container">
-        <div className="xp__grid">
+        <div className="grid md:grid-cols-2 gap-6">
           {jobs.map((job, i) => (
-            <article className="xp__card" key={i}>
-              <div className="xp__icon"><BsBriefcase /></div>
-              <div className="xp__head">
-                <h3>{job.role}</h3>
-                <h4>{job.company} <span>· {job.type}</span></h4>
-                <p className="xp__meta">
-                  {job.period} · {job.length} · {job.location}
-                </p>
+            <article
+              key={i}
+              className="card-neo-3 p-6 neo-hover"
+            >
+              <div className="grid place-items-center w-11 h-11 bg-purple text-white border-2 border-ink mb-4 text-lg">
+                <BsBriefcase />
               </div>
-              <ul className="xp__points">
+              <h3 className="heading text-lg">{job.role}</h3>
+              <h4 className="text-purple font-semibold mt-1">
+                {job.company} <span className="text-ink/50 font-normal text-sm">· {job.type}</span>
+              </h4>
+              <p className="text-ink/50 text-xs mt-1">
+                {job.period} · {job.length} · {job.location}
+              </p>
+              <ul className="mt-4 flex flex-col gap-2">
                 {job.points.map((p, idx) => (
-                  <li key={idx}>{p}</li>
+                  <li key={idx} className="relative pl-5 text-sm text-ink/75 leading-relaxed">
+                    <span className="absolute left-0 top-2 w-2 h-2 bg-yellow border border-ink" />
+                    {p}
+                  </li>
                 ))}
               </ul>
             </article>
           ))}
         </div>
 
-        <h3 className="xp__subtitle">Technical Expertise</h3>
-        <div className="xp__skills">
+        <h3 className="heading text-2xl md:text-3xl text-center mt-16 mb-8">
+          Technical Expertise
+        </h3>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((cat) => (
-            <article className="xp__skill" key={cat.title}>
-              <h4>{cat.title}</h4>
-              <div className="xp__tags">
+            <article key={cat.title} className="card-neo p-5 neo-hover">
+              <h4 className="heading text-base border-b-2 border-ink pb-2 mb-4">{cat.title}</h4>
+              <div className="flex flex-wrap gap-2">
                 {cat.items.map((item) => (
-                  <span key={item}>{item}</span>
+                  <span
+                    key={item}
+                    className="text-xs font-semibold bg-beige border-2 border-ink px-2 py-1"
+                  >
+                    {item}
+                  </span>
                 ))}
               </div>
             </article>

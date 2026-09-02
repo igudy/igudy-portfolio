@@ -1,197 +1,154 @@
-/* Tailwind v4 - utilities only (preflight omitted to preserve the custom design) */
-@layer theme, base, components, utilities;
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/utilities.css" layer(utilities);
-@config "../tailwind.config.js";
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
 
-/* Ignovations font: ClashDisplay */
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("/fonts/ClashDisplay-Bold.otf") format("opentype");
-    font-display: swap;
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("/fonts/ClashDisplay-Semibold.otf") format("opentype");
-    font-display: swap;
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("/fonts/ClashDisplay-Medium.otf") format("opentype");
-    font-display: swap;
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("/fonts/ClashDisplay-Regular.otf") format("opentype");
-    font-display: swap;
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("/fonts/ClashDisplay-Light.otf") format("opentype");
-    font-display: swap;
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("/fonts/ClashDisplay-Extralight.otf") format("opentype");
-    font-display: swap;
-    font-weight: 200;
-    font-style: normal;
+/* ==========================================================================
+   NEUBRUTALIST THEME (Nectall-inspired) — Tailwind v4
+   ========================================================================== */
+@theme {
+  /* Palette */
+  --color-ink: #1a1a2e; /* borders + primary text */
+  --color-cream: #fafaf7; /* page background */
+  --color-beige: #f5f1e8; /* alternate section bg */
+  --color-surface: #ffffff; /* cards */
+  --color-purple: #6c3fc5; /* primary accent */
+  --color-purple-dark: #4a1a8a;
+  --color-yellow: #ffdb33;
+  --color-yellow-light: #fae583;
+  --color-pink: #c42d5c;
+  --color-green: #2d8f4e;
+  --color-blue: #1f4bff;
+  --color-orange: #e89b2d;
+  --color-red: #e74c3c;
+
+  /* Fonts */
+  --font-heading: "Archivo Black", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --default-font-family: var(--font-body);
+
+  /* Hard offset shadows (neubrutalism signature) */
+  --shadow-neo-sm: 2px 2px 0 0 #1a1a2e;
+  --shadow-neo: 3px 3px 0 0 #1a1a2e;
+  --shadow-neo-md: 4px 4px 0 0 #1a1a2e;
+  --shadow-neo-lg: 6px 6px 0 0 #1a1a2e;
+  --shadow-neo-xl: 8px 8px 0 0 #1a1a2e;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
 }
 
-:root{
-    /* Dark theme + yellow accent */
-    --color-bg: #0b0b0d;
-    --color-bg-variant: #16161a;
-    --color-bg-variantt: #0b0b0d;
-    --color-primary: #ffc93c;
-    --color-primary-variant: rgba(255, 201, 60, 0.35);
-    --color-white: #f5f5f5;
-    --color-light: rgba(255, 255, 255, 0.65);
-
-    --transition: all 400ms ease;
-
-    --container-width-lg: 75%;
-    --container-width-md: 86%;
-    --container-width-sm: 90%;
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: clip;
 }
 
-html{
-    scroll-behavior: smooth;
+::selection {
+  background: var(--color-purple);
+  color: #fff;
 }
 
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink);
 }
 
-body{
-    font-family: "ClashDisplay", "Poppins", sans-serif;
-    background: var(--color-bg);
-    color: var(--color-white);
-    line-height: 1.7;
-    background-image:
-        radial-gradient(rgba(255, 201, 60, 0.06) 1px, transparent 1px);
-    background-size: 22px 22px;
-}
+/* ==========================================================================
+   COMPONENT HELPERS
+   ========================================================================== */
+@layer components {
+  /* Interactive lift/press used across buttons, cards, links */
+  .neo-hover {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .neo-hover:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-neo-lg);
+  }
+  .neo-hover:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
 
-
-/* GENERAL STYLES */
-.container{
-    width: var(--container-width-lg);
-    margin: 0 auto;
-}
-
-h1, h2, h3, h4, h5, h6{
-    font-weight: 500;
-}
-
-h1{
-    font-size: 2.5rem;
-}
-
-section{
-    margin-top: 8rem;
-    scroll-margin-top: 6rem;
-}
-
-section > h2, section > h5{
-    text-align: center;
-    color: var(--color-light);
-}
-
-section > h2{
-    color: var(--color-primary);
-    margin-bottom: 3rem;
-}
-
-.text-light{
-    color: var(--color-light);
-}
-
-a{
-    color: var(--color-primary);
-    transition: var(--transition);
-}
-
-a:hover{
-    color: var(--color-white);
-}
-
-.btn{
-    width: max-content;
-    display: inline-block;
-    color: var(--color-primary);
-    padding: 0.75rem 1.2rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    border: 1px solid var(--color-primary);
-    transition: var(--transition);
-    font-family: inherit;
-    font-size: 0.95rem;
-}
-
-.btn:hover{
-    background: var(--color-white);
-    color: var(--color-bg);
-    border-color: transparent;
-}
-
-.btn-primary{
-    background: var(--color-primary);
-    color: var(--color-bg);
-}
-
-.btn-primary:hover{
-    background: #ffd76b;
-    color: var(--color-bg);
-}
-
-
-img{
-    display: block;
-    width: 100%;
-    object-fit: cover;
-}
-
-
-/* MEDIA QUERIES (MEDIUM DEVICES) */
-@media screen and (max-width: 1024px){
-    .container{
-        width: var(--container-width-md);
+  /* Section shell */
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  @media (min-width: 768px) {
+    .section {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
     }
+  }
 
-    section{
-        margin-top: 6rem;
-    }
-}
+  /* Uppercase display heading */
+  .heading {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 0.98;
+  }
 
+  /* Buttons */
+  .btn-neo {
+    @apply inline-flex items-center justify-center gap-2 font-semibold border-2 border-ink cursor-pointer select-none px-6 py-3 text-base;
+    box-shadow: var(--shadow-neo-md);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-neo:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-neo-lg);
+  }
+  .btn-neo:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+  .btn-neo-sm {
+    @apply px-4 py-2 text-sm;
+  }
+  .btn-neo-lg {
+    @apply px-8 py-4 text-lg;
+  }
+  .btn-primary-neo {
+    @apply bg-purple text-white;
+  }
+  .btn-primary-neo:hover {
+    @apply bg-purple-dark;
+  }
+  .btn-outline-neo {
+    @apply bg-cream text-ink;
+  }
+  .btn-outline-neo:hover {
+    @apply bg-beige;
+  }
+  .btn-yellow-neo {
+    @apply bg-yellow text-ink;
+  }
+  .btn-yellow-neo:hover {
+    @apply bg-yellow-light;
+  }
 
-/* MEDIA QUERIES (SMALL DEVICES) */
-@media screen and (max-width: 600px){
-    .container{
-        width: var(--container-width-sm);
-    }
+  /* Pill badge */
+  .badge-neo {
+    @apply inline-flex items-center gap-2 bg-yellow text-ink border-2 border-ink px-3 py-1 text-sm font-semibold;
+    box-shadow: var(--shadow-neo-sm);
+  }
 
-    section > h2{
-        margin-bottom: 2rem;
-    }
+  /* Cards */
+  .card-neo {
+    @apply bg-white border-2 border-ink;
+    box-shadow: var(--shadow-neo-md);
+  }
+  .card-neo-3 {
+    @apply bg-white border-[3px] border-ink;
+    box-shadow: var(--shadow-neo-md);
+  }
 }

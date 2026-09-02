@@ -1,58 +1,71 @@
 import React from 'react'
-import './about.css'
+import SectionHeading from '../ui/SectionHeading'
 import ME from '../../assets/ignovations/igudy-pro.jpg'
-import {FaAward} from 'react-icons/fa'
-import {FiUsers} from 'react-icons/fi'
-import {VscFolderLibrary} from 'react-icons/vsc'
+import { FaAward } from 'react-icons/fa'
+import { FiUsers } from 'react-icons/fi'
+import { VscFolderLibrary } from 'react-icons/vsc'
+
+const cards = [
+  { icon: <FaAward />, title: 'Experience', sub: '6+ Years Building', color: 'bg-yellow' },
+  { icon: <FiUsers />, title: 'Clients', sub: 'Local & International', color: 'bg-pink text-white' },
+  { icon: <VscFolderLibrary />, title: 'Products', sub: '20+ Shipped', color: 'bg-green text-white' },
+]
 
 const About = () => {
   return (
-    <section id='about'>
-      <h5>Get to Know</h5>
-      <h2>About Me</h2>
+    <section id="about" className="section bg-beige">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading eyebrow="Get to Know" title="About Me" />
 
-      <div className="container about__container">
-        <div className="about__me">
-          <div className="about__me-image">
-            <img src={ME} alt="AboutImage" />
-          </div>
-        </div>
-
-        <div className="about__content">
-          <div className="about__cards">
-            <article className='about__card'>
-              <FaAward className='about__icon' />
-              <h5>Experience</h5>
-              <small>6+ Years Building</small>
-            </article>
-
-            <article className='about__card'>
-              <FiUsers className='about__icon' />
-              <h5>Clients</h5>
-              <small>Local & International</small>
-            </article>
-
-            <article className='about__card'>
-              <VscFolderLibrary className='about__icon' />
-              <h5>Products</h5>
-              <small>20+ Shipped</small>
-            </article>
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
+          {/* Image */}
+          <div className="flex">
+            <div
+              className="border-[3px] border-ink bg-white p-2 w-full"
+              style={{ boxShadow: 'var(--shadow-neo-xl)' }}
+            >
+              <img
+                src={ME}
+                alt="Igunma Goodness"
+                className="w-full h-full min-h-[420px] object-cover object-top"
+              />
+            </div>
           </div>
 
-          <p><strong>Technology is my tool. Impact is my mission.</strong> I believe the future is built
-            by people who solve meaningful problems, develop other leaders, and create systems that outlive
-            them. My work centers on building global solutions and raising the next generation of technology
-            leaders.
-          </p>
-          <p>Over the past several years I've contributed to the design and development of products across
-            fintech, banking, startups, CRM, and enterprise environments, helping build scalable platforms,
-            core banking systems, and digital products that deliver real business value, for companies like
-            Sterling Bank, Interswitch, and a range of local and international clients.
-          </p>
-          <a href='#contact' className='btnAbout btn-primary'>
-            Let's Talk
-          </a>
+          {/* Content */}
+          <div>
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-8">
+              {cards.map((c) => (
+                <article
+                  key={c.title}
+                  className={`${c.color} border-2 border-ink p-4 text-center neo-hover`}
+                  style={{ boxShadow: 'var(--shadow-neo-md)' }}
+                >
+                  <div className="text-2xl flex justify-center mb-2">{c.icon}</div>
+                  <h5 className="font-bold text-sm">{c.title}</h5>
+                  <small className="opacity-80 text-xs">{c.sub}</small>
+                </article>
+              ))}
+            </div>
 
+            <p className="text-ink/80 mb-4 leading-relaxed">
+              <strong className="text-ink">Technology is my tool. Impact is my mission.</strong> I
+              believe the future is built by people who solve meaningful problems, develop other
+              leaders, and create systems that outlive them. My work centers on building global
+              solutions and raising the next generation of technology leaders.
+            </p>
+            <p className="text-ink/80 mb-8 leading-relaxed">
+              Over the past several years I&apos;ve contributed to the design and development of
+              products across fintech, banking, startups, CRM, and enterprise environments, helping
+              build scalable platforms, core banking systems, and digital products that deliver real
+              business value, for companies like Sterling Bank, Interswitch, and a range of local and
+              international clients.
+            </p>
+
+            <a href="#contact" className="btn-neo btn-primary-neo">
+              Let&apos;s Talk
+            </a>
+          </div>
         </div>
       </div>
     </section>
