@@ -5,9 +5,11 @@ import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
 import About from './components/about/About'
 import Experience from './components/experience/Experience'
+import Certifications from './components/certifications/Certifications'
 import Services from './components/services/Services'
 import Portfolio from './components/portfolio/Portfolio'
 import Leadership from './components/leadership/Leadership'
+import Recommendations from './components/recommendations/Recommendations'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 import Products from './pages/Products'
@@ -36,9 +38,11 @@ const Home = () => (
     <Nav />
     <About />
     <Experience />
+    <Certifications />
     <Services />
     <Portfolio />
     <Leadership />
+    <Recommendations />
     <Contact />
   </>
 )

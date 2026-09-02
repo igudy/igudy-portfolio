@@ -1,10 +1,11 @@
 import React, { useMemo, useState } from 'react'
 import { HiOutlineExternalLink } from 'react-icons/hi'
 import { products, PRODUCT_CATEGORIES, productMatchesCategory } from '../data/products'
+import type { ProductCategory } from '../data/products'
 import './products.css'
 
 const Products = () => {
-  const [category, setCategory] = useState('all')
+  const [category, setCategory] = useState<ProductCategory>('all')
 
   const filtered = useMemo(
     () => products.filter((p) => productMatchesCategory(p, category)),
