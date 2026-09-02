@@ -1,0 +1,16 @@
+{
+  "name": "Igudy — Goodness Igunma",
+  "short_name": "Igudy",
+  "description": "Software Engineer, Builder & Tech Educator. Founder of Ignovations.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafaf7",
+  "theme_color": "#6c3fc5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

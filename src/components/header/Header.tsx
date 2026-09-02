@@ -24,13 +24,8 @@ const Header = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left — copy */}
           <div className="text-center lg:text-left">
-            <span className="badge-neo mb-6">
-              <span className="w-2 h-2 rounded-full bg-green inline-block" />
-              Available for select projects
-            </span>
-
-            <p className="mt-6 text-base font-semibold text-ink/70">
-              Hi, I&apos;m Igunma Goodness (Igudy)
+            <p className="text-base font-semibold text-ink/70">
+              Hi, I&apos;m Goodness Igunma (Igudy)
             </p>
 
             <h1 className="heading text-4xl sm:text-5xl lg:text-6xl mt-3 mb-6 leading-[0.95]">
@@ -47,8 +42,7 @@ const Header = () => {
             </h1>
 
             <p className="text-lg text-ink/70 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              I build scalable products across fintech, banking, and enterprise,
-              and I&apos;m raising the next generation of technology leaders.
+              I build scalable products across fintech, banking, and enterprise.
             </p>
 
             <CTA />

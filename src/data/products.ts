@@ -21,6 +21,7 @@ import nftopia from "../assets/ignovations/nftmarket.jpg";
 import igudyport from "../assets/ignovations/igudyport.png";
 import hyperrealms from "../assets/ignovations/hyperrealms_square.png";
 import brikcrm from "../assets/ignovations/brik-crm.png";
+import brikMobile from "../assets/ignovations/brik-mobile.png";
 import seabaas from "../assets/ignovations/seabaas.png";
 import shelfmates from "../assets/ignovations/shelfmates.png";
 import ignovations from "../assets/ignovations/ignovations.png";
@@ -58,20 +59,12 @@ const eduArkDesc =
 
 export const products: Product[] = [
   {
-    id: 1,
-    image: nectallMobileApp,
-    title: "Nectall Mobile App",
-    desc: nectallDesc,
-    link: "https://apps.apple.com/ng/app/nectall/id6761627133",
-    categories: ["apps"],
-  },
-  {
-    id: 22,
-    image: brikcrm,
-    title: "Brik CRM Mobile App",
-    desc: "The Brik CRM mobile app helps field-service teams run the job from anywhere, managing leads, estimates, scheduling, jobs, invoices, and payments so technicians and the office stay in sync.",
-    link: "https://brikcrm.com/",
-    categories: ["apps"],
+    id: 24,
+    image: seabaas,
+    title: "SeaBaas Core Banking",
+    desc: "A modern core-banking platform for banks and fintechs, built as a large-scale micro-frontend web application by a big engineering team. I contributed to the frontend, including the User & Access Module — maker/checker approvals, permission-based access, and transaction limits — that powers secure day-to-day banking operations.",
+    link: "https://bepeerless.co/",
+    categories: ["fintech", "web"],
   },
   {
     id: 23,
@@ -82,28 +75,12 @@ export const products: Product[] = [
     categories: ["web"],
   },
   {
-    id: 24,
-    image: seabaas,
-    title: "SeaBaas Core Banking",
-    desc: "A modern core-banking platform for banks and fintechs, built as a large-scale micro-frontend web application by a big engineering team. I contributed to the frontend, including the User & Access Module — maker/checker approvals, permission-based access, and transaction limits — that powers secure day-to-day banking operations.",
-    link: "https://bepeerless.co/",
-    categories: ["fintech", "web"],
-  },
-  {
-    id: 25,
-    image: shelfmates,
-    title: "ShelfMates",
-    desc: "A React Native app for sharing bookshelves with friends — track what you read, lend books, and discover recommendations from your mates, with a tailored interest-based onboarding.",
-    link: "https://www.instagram.com/p/Da8bqvNs81E/",
+    id: 1,
+    image: nectallMobileApp,
+    title: "Nectall Mobile App",
+    desc: nectallDesc,
+    link: "https://apps.apple.com/ng/app/nectall/id6761627133",
     categories: ["apps"],
-  },
-  {
-    id: 26,
-    image: ignovations,
-    title: "Ignovations",
-    desc: "The software and digital products studio I founded — building mobile apps, web platforms, and full product launches for founders and teams, alongside teaching the next generation of tech leaders.",
-    link: "https://ignovations.com",
-    categories: ["web", "portfolio"],
   },
   {
     id: 2,
@@ -127,6 +104,30 @@ export const products: Product[] = [
     title: "Nutrisnap",
     desc: "A nutrition companion that uses AI to estimate calories, protein, carbs, and fats from a single meal photo, so users eat with awareness without manual logging.",
     link: "https://www.instagram.com/p/DXUoY2CjFxy/",
+    categories: ["apps"],
+  },
+  {
+    id: 25,
+    image: shelfmates,
+    title: "ShelfMates",
+    desc: "A React Native app for sharing bookshelves with friends — track what you read, lend books, and discover recommendations from your mates, with a tailored interest-based onboarding.",
+    link: "https://www.instagram.com/p/Da8bqvNs81E/",
+    categories: ["apps"],
+  },
+  {
+    id: 26,
+    image: ignovations,
+    title: "Ignovations",
+    desc: "The software and digital products studio I founded — building mobile apps, web platforms, and full product launches for founders and teams, alongside teaching the next generation of tech leaders.",
+    link: "https://ignovations.com",
+    categories: ["web", "portfolio"],
+  },
+  {
+    id: 22,
+    image: brikMobile,
+    title: "Brik CRM Mobile App",
+    desc: "The Brik CRM mobile app helps field-service teams run the job from anywhere, managing leads, estimates, scheduling, jobs, invoices, and payments so technicians and the office stay in sync.",
+    link: "https://brikcrm.com/",
     categories: ["apps"],
   },
   {
