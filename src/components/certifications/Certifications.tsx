@@ -8,7 +8,7 @@ const certs: Cert[] = [
   { title: 'Interswitch Academy Engineering Development Program', issuer: 'Interswitch Group', date: 'Dec 2022' },
   { title: "Master's Degree", issuer: 'Miva Open University', date: 'In Progress', ongoing: true },
   { title: 'Leadership & Business Program', issuer: 'Eden Leadership and Business School', date: 'Oct 2025'  },
-  { title: 'Advanced MERN Stack Authentication', issuer: 'Udemy', date: 'Nov 2023' },
+  { title: 'Advanced MERN Stack Course', issuer: 'Udemy', date: 'Nov 2023' },
   { title: 'Building Web Applications in PHP', issuer: 'University of Michigan (Coursera)', date: 'Jul 2020' },
   { title: 'JavaScript, jQuery and JSON', issuer: 'University of Michigan (Coursera)', date: 'Jun 2020' },
   { title: 'Social Media Advertising', issuer: 'University of Colorado Boulder (Coursera)', date: 'Oct 2020' },
