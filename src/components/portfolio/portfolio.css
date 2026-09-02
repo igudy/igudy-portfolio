@@ -23,7 +23,31 @@
 }
 
 .portfolio__item h3{
-    margin: 0.5rem 0 1rem;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.portfolio__item-desc{
+    color: var(--color-light);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.btnGit{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.btnGit--soon{
+    font-style: italic;
+    color: var(--color-light);
+    border-color: var(--color-primary-variant);
+}
+
+.portfolio__all{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
 }
 
 .portfolio__item-cta{
