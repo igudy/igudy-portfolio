@@ -38,9 +38,9 @@ const Home = () => (
     <Nav />
     <About />
     <Experience />
+    <Portfolio />
     <Certifications />
     <Services />
-    <Portfolio />
     <Leadership />
     <Recommendations />
     <Contact />

@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="relative overflow-hidden bg-cream min-h-screen flex items-center pt-24 pb-16"
+      className="relative overflow-hidden bg-beige min-h-screen flex items-center pt-24 pb-16"
     >
       {/* Decorative squares */}
       <div className="hidden lg:block absolute top-28 left-10 w-16 h-16 bg-yellow border-2 border-ink rotate-12 opacity-70" />

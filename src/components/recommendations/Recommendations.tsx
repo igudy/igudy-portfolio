@@ -13,7 +13,7 @@ const recommendations = [
 
 const Recommendations = () => {
   return (
-    <section id="recommendations" className="section bg-cream">
+    <section id="recommendations" className="section bg-beige">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="What People Say" title="Recommendations" />
 

@@ -13,7 +13,7 @@ const cards = [
 
 const About = () => {
   return (
-    <section id="about" className="section bg-beige">
+    <section id="about" className="section bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="Get to Know" title="About Me" />
 
@@ -27,7 +27,7 @@ const About = () => {
               <img
                 src={ME}
                 alt="Igunma Goodness"
-                className="w-full h-[26rem] sm:h-[30rem] object-contain object-center bg-white"
+                className="w-full h-[26rem] sm:h-[30rem] object-cover object-center"
               />
             </div>
           </div>
@@ -50,9 +50,9 @@ const About = () => {
 
             <p className="text-ink/80 mb-4 leading-relaxed">
               <strong className="text-ink">Technology is my tool. Impact is my mission.</strong> I
-              believe the future is built by people who solve meaningful problems, develop other
-              leaders, and create systems that outlive them. My work centers on building global
-              solutions and raising the next generation of technology leaders.
+              believe the future is built by people who solve meaningful problems and create systems
+              that outlive them. My work centers on designing and shipping reliable, scalable
+              products that deliver real business value.
             </p>
             <p className="text-ink/80 mb-8 leading-relaxed">
               Over the past several years I&apos;ve contributed to the design and development of

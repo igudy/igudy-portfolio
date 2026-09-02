@@ -88,7 +88,7 @@ const skills = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="section bg-cream">
+    <section id="experience" className="section bg-beige">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="My Journey" title="Experience" />
 
