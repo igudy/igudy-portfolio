@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/me_studio.png'
+import ME from '../../assets/ignovations/igudy-pro.jpg'
 import {FaAward} from 'react-icons/fa'
 import {FiUsers} from 'react-icons/fi'
 import {VscFolderLibrary} from 'react-icons/vsc'
@@ -23,30 +23,31 @@ const About = () => {
             <article className='about__card'>
               <FaAward className='about__icon' />
               <h5>Experience</h5>
-              <small>2+ Years Experience</small>
+              <small>6+ Years Building</small>
             </article>
 
             <article className='about__card'>
               <FiUsers className='about__icon' />
               <h5>Clients</h5>
-              <small>100+ Clients</small>
+              <small>Local & International</small>
             </article>
 
             <article className='about__card'>
               <VscFolderLibrary className='about__icon' />
-              <h5>Projects</h5>
-              <small>80+ Completed</small>
+              <h5>Products</h5>
+              <small>20+ Shipped</small>
             </article>
           </div>
 
-          <p>Full Stack Web Developer - Bootstrap, JavaScript, React, PHP & Laravel.<br></br> My expertise
-            ranges from developing engaging and responsive user interfaces, backend logic, and debugging websites / 
-            web applications.
+          <p>I'm a founder and software engineer at Ignovations, where I design and ship real
+            products used by real people, from mobile apps to full web platforms. I've built and
+            delivered software for some of the biggest names in finance and tech, including Sterling Bank,
+            FCMB, and Interswitch, alongside a range of local and international clients.
           </p>
-          <p>Graphic Designer - Adobe Photoshop & Illustrator<br></br>
-            Proficient graphic designer knowledgeable about branding, logos, flyers, posters, marketing materials and website design
-            .Highly creative interactive development professional with experience in business development.
-          
+          <p>My work spans the full stack, React, React Native, TypeScript, Node.js, NestJS and MongoDB,
+            with a strong focus on building reusable, scalable, and maintainable products. Beyond the code,
+            I mentor and teach young Nigerians through masterclasses like Beyond Coding, helping them grow
+            into skilled, confident builders and leaders.
           </p>
           <a href='#contact' className='btnAbout btn-primary'>
             Let's Talk
